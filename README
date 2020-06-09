@@ -1,0 +1,27 @@
+Once I saw a photograph of a place in Madrid, nothing special, a normal street in the center. 
+But I had been in that street before, many times, and I just couldn't remember which street that was. 
+Annoyed, I felt the need to find out. And at the same time, learn a little bit of python.
+
+In the photo I could see a pharmacy and a tobacconist shop next to each other.
+Both types of establishments needed a license from the region, 
+and they have to be registered on a public list, so anyone can have access to that information. 
+After a few minutes I could find both files:
+https://www.comunidad.madrid/sites/default/files/doc/sanidad/orde/oficinas_de_farmacia_abiertas.08062020.pdf
+https://www.crtm.es/media/239997/estancosttp_comunidad_de_madrid.pdf
+
+However, after some problems with the tobacco shops list 
+(extracting data from pdf using python is somehow very delicate, and not always works)
+I had to obtain the data in another format. 
+Luckily, I could download a csv file directly from:
+https://datos.crtm.es/datasets/ptosventa-logista/data
+
+Once the postal codes and addresses of all pharmacies and tobacconist shops 
+in the center of Madrid (postal codes below 28020) were extracted, 
+The I found the streets that hosted both. 
+In addition, the difference in their numbers should be exactly 2, 
+as in the photo they appear to be next to each other. 
+
+The code generates a csv file with a list of addresses where 
+a pharmacy can be found next to a tobacconist shop. 
+Then it was a matter of checking the handful of places "by hand", 
+and in no time I could find out where the place was. 
